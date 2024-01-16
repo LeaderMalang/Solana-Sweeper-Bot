@@ -15,3 +15,21 @@ THis script listen incoming transactions by solana address. As soon as the walle
 >  **What is the purpose of this tool?**
 
 >  Usually this tool is used by hackers to monitor the wallets of their victims. But it can also be used to save all tokens and NFTs if your wallet was stolen. Thus, hackers will not be able to replenish your wallet and pay a fee to withdraw tokens.
+
+>  ** Settings Up/Installation**
+
+>  Please install python 3.10 or 3.9 version from Official website.After installing run following commands
+
+> Create a virtual environment
+
+`python -m venv env`
+
+> Activate the virtual environment
+
+`source /env/bin/activate`
+> Install required packages
+
+`pip install -r requirements.txt`
+
+> Run Main.py 
+`python main.py`
