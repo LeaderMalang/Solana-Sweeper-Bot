@@ -1,7 +1,7 @@
 ## 🧹 Solana Sweeper Bot
 **How Script Works?**
 THis script listen incoming transactions by solana address. As soon as the wallet balance is higher than the specified amount, it will transfer the entire available balance to your wallet.
-> :warning: **Attention**
+>  **Attention**
 > Of course, you must have a private key to the wallet you are going to listen to
 
 ## 💠 Variables
@@ -16,7 +16,7 @@ THis script listen incoming transactions by solana address. As soon as the walle
 
 >  Usually this tool is used by hackers to monitor the wallets of their victims. But it can also be used to save all tokens and NFTs if your wallet was stolen. Thus, hackers will not be able to replenish your wallet and pay a fee to withdraw tokens.
 
->  ** Settings Up/Installation**
+>  **Settings Up/Installation**
 
 >  Please install python 3.10 or 3.9 version from Official website.After installing run following commands
 
