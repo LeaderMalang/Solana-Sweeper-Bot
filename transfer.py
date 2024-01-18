@@ -30,11 +30,12 @@ async def do_transfer():
     balance = client.get_balance(public_key)
     print(balance)
 
-
+    fee=client.get_fees()
+    lamport_fee=fee['value']['feeCalculator']['lamportsPerSignature']
     receiver = PublicKey(os.environ['WALLET_DEST'])
     sender = Keypair().from_private_key(os.environ['WALLET_SWEEP_KEY'])
-    amount = 20000 # This is the amount in lamports
-
+    amount = balance -lamport_fee # This is the amount in lamports
+    
     instruction = transfer(
         from_public_key=sender.public_key,
         to_public_key=receiver, 
