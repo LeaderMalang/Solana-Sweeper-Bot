@@ -43,12 +43,15 @@ async def main():
         for token in tokens['result']['value']:
             token_balance=token['account']['data']['parsed']['info']['tokenAmount']['uiAmount'] 
             token_name=token['account']['data']['program']
+            mint=token['account']['data']['parsed']['info']['mint']
+            program_id=token['account']['owner']
+
             if token_balance > SOL_MIN_SWEEP:
                 try:
                     # fee=await solana_client.get_fees()
                     # lamport_fee=fee['value']['feeCalculator']['lamportsPerSignature']
                     # balance=token_balance-lamport_fee
-                    await do_token_transfer(token_balance)
+                    await do_token_transfer(token_balance,mint,program_id)
                     sleep(60)
                 except Exception as e:
                     sleep(10)
